@@ -1,6 +1,6 @@
-from client import APIClient
+from qwhale_client import APIClient
 
-TOKEN = "904c4c34756b26cea3a34e7229004bf0:487f82b28d94f9f215fabb74846ce660"
+TOKEN = "<YOUR API TOKEN>"
 
 client = APIClient(TOKEN)
 
