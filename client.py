@@ -10,12 +10,19 @@ API_URL = "http://127.0.0.1:8000/api"
 
 class APIClient:
     def __init__(self, token: str):
+        if not self.verify_token(token):
+            raise ValueError(f"Token: {token} is invalid.")
         self._token = token
         self._db_name = self._token.split(":")[0]
         self._session: requests.sessions.Session = requests.session()
         self._database_info = None
         self._mongo_client: MongoClient = None
         self.activated = False
+
+    def verify_token(self, token: str) -> bool:
+        if len(token) != 65 or token.count(":") != 1:
+            return False
+        return True
 
     @property
     def database_info(self):
