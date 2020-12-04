@@ -15,7 +15,7 @@ setup(
     author="Yehoyada.s",  # Type in your name
     author_email="hvuhsg6@gmail.com",  # Type in your E-Mail
     url="https://qwhale.ml",  # Provide either the link to your github or to your website
-    download_url="https://github.com/hvuhsg/qwhale_client/archive/0.0.5.tar.gz",
+    download_url="https://github.com/hvuhsg/qwhale_client/archive/0.1.8.tar.gz",
     keywords=[
         "API",
         "Client",
