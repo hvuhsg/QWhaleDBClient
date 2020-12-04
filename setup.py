@@ -5,7 +5,7 @@ with open("README.md", "r") as f:
 
 setup(
     name="qwhale_client",  # How you named your package folder
-    packages=find_namespace_packages(),  # Chose the same as "name"
+    packages="qwhale_client",  # Chose the same as "name"
     include_package_data=True,
     version="v0.1.0",  # Start with a small number and increase it with every change you make
     license="MIT",  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
@@ -15,7 +15,7 @@ setup(
     author="Yehoyada.s",  # Type in your name
     author_email="hvuhsg6@gmail.com",  # Type in your E-Mail
     url="https://qwhale.ml",  # Provide either the link to your github or to your website
-    download_url="https://github.com/hvuhsg/qwhale_client/archive/v0.1.0.tar.gz",
+    download_url="https://github.com/hvuhsg/qwhale_client/archive/0.0.3.tar.gz",
     keywords=[
         "API",
         "Client",
@@ -33,5 +33,6 @@ setup(
         "License :: OSI Approved :: MIT License",  # Again, pick a license
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
     ],
 )
