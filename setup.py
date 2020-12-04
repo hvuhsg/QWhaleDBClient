@@ -1,6 +1,6 @@
 from setuptools import setup, find_namespace_packages
 
-with open("qwhale_client/README.md", "r") as f:
+with open("README.md", "r") as f:
     long_description = f.read()
 
 setup(
