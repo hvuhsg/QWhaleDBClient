@@ -27,9 +27,9 @@ setup(
     ],  # Keywords that define your package best
     install_requires=["pymongo", "requests"],  # I get to this in a second
     classifiers=[
-        "Development Status :: 1 - Alpha",
+        "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",  # Define that your audience are developers
-        "Topic :: Software Development :: API Tools",
+        "Topic :: Software Development :: Build Tools",
         "License :: OSI Approved :: MIT License",  # Again, pick a license
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
