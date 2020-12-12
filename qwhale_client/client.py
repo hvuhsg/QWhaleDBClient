@@ -5,7 +5,7 @@ from pymongo.database import Database
 
 __all__ = ["APIClient"]
 
-API_URL = "http://127.0.0.1:8000/api"
+API_URL = "http://qwhale.ml/api"
 
 
 class APIClient:
