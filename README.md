@@ -2,8 +2,8 @@
 
 #### This is the official python client library
 
-The library is simple, all you need is a TOKEN that you can get from our website [hare](http://127.0.0.1:8000)
-and that it! you are ready to work with our service
+The library is simple, all you need is a TOKEN that you can get from our website [hare](http://qwhale.ml)
+and that it! you are ready to work with our service.
 
 
 The library works with [_pymongo_](https://github.com/mongodb/mongo-python-driver) so you can use it like you use to.
