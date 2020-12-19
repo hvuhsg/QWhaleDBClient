@@ -2,24 +2,24 @@
 
 Our service provides an easy way to store your data free on the MongoDB database.
 
-There is tow main options to use our service
-1) Using the REST API  
-    To activate...
+There is tow main options to use our service\
+1) Using the REST API\
+    To activate...\
     ```
     $> https://qwhale.ml/activate/{YOUR-TOKEN}
     ```
-    To deactivate...
+    To deactivate...\
     ```
     $> https://qwhale.ml/deactivate/{YOUR-TOKEN}
     ```
 
-2) Using the official library
-    The library is simple, all you need is a TOKEN that you can get from our website [here](http://qwhale.ml)
-    and that it! you are ready to work with our service.
+2) Using the official library\
+    The library is simple, all you need is a TOKEN that you can get from our website [here](http://qwhale.ml)\
+    and that it! you are ready to work with our service.\
 
-    The library works with [_pymongo_](https://github.com/mongodb/mongo-python-driver) so you can use it like you use to.
+    The library works with [_pymongo_](https://github.com/mongodb/mongo-python-driver) so you can use it like you use to.\
 
-    **code example**
+    **code example**\
     ```python
     from qwhale_client import APIClient
 
