@@ -1,37 +1,56 @@
-## Welcome to GitHub Pages
+# Welcome To QWhale Documentation.
 
-You can use the [editor on GitHub](https://github.com/hvuhsg/qwhale_client/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Our service provides an easy way to store your data free on the MongoDB database.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+There is tow main options to use our service
+1) Using the REST API
+To activate...
+```
+$> https://qwhale.ml/activate/{YOUR-TOKEN}
+```
+To deactivate...
+```
+$> https://qwhale.ml/deactivate/{YOUR-TOKEN}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+2) Using the official library
+The library is simple, all you need is a TOKEN that you can get from our website [here](http://qwhale.ml)
+and that it! you are ready to work with our service.
 
-### Jekyll Themes
+The library works with [_pymongo_](https://github.com/mongodb/mongo-python-driver) so you can use it like you use to.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hvuhsg/qwhale_client/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+**code example**
+```python
+from qwhale_client import APIClient
 
-### Support or Contact
+TOKEN = "<YOUR API TOKEN>"
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+client = APIClient(TOKEN)
+
+with client as database:
+    print(client.activated)  # -> True
+    database["test"].insert_one({"key": "value", "extra": "123456"})
+    document = database["test"].find_one({"key": "value"})
+    print(document)  # -> {"_id": ObjectId(...), "key": "value", "extra": "123456"}
+
+print(client.activated)  # -> False
+```
+
+**Another code example**
+```python
+from qwhale_client import APIClient
+
+TOKEN = "<YOUR API TOKEN>"
+
+client = APIClient(TOKEN)
+
+database = client.get_database()
+print(client.activated)  # -> True
+
+database["test"].insert_one({"key": "value", "extra": "123456"})
+document = database["test"].find_one({"key": "value"})
+print(document)  # -> {"_id": ObjectId(...), "key": "value", "extra": "123456"}
+
+print(client.close())  # -> {'data_saved': True}
+print(client.activated)  # -> False
+```
