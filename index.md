@@ -4,7 +4,7 @@ Our service provides an easy way to store your data free on the MongoDB database
 
 There is tow main options to use our service  
 
-1. **Using the REST API**
+1) **Using the REST API**
 
 __To activate...__
 ```
@@ -15,7 +15,7 @@ __To deactivate...__
 $> https://qwhale.ml/deactivate/{YOUR-TOKEN}
 ```
 
-2. **Using the official library**
+2) **Using the official library**
 
 The library is simple, all you need is a TOKEN that you can get from our website [here](http://qwhale.ml)
 and that it! you are ready to work with our service.
