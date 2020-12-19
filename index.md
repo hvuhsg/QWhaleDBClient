@@ -2,55 +2,57 @@
 
 Our service provides an easy way to store your data free on the MongoDB database.
 
-There is tow main options to use our service\
-1) Using the REST API\
-    To activate...\
-    ```
-    $> https://qwhale.ml/activate/{YOUR-TOKEN}
-    ```
-    To deactivate...\
-    ```
-    $> https://qwhale.ml/deactivate/{YOUR-TOKEN}
-    ```
+There is tow main options to use our service
+1) **Using the REST API**
 
-2) Using the official library\
-    The library is simple, all you need is a TOKEN that you can get from our website [here](http://qwhale.ml)\
-    and that it! you are ready to work with our service.\
+__To activate...__
+```
+$> https://qwhale.ml/activate/{YOUR-TOKEN}
+```
+__To deactivate...__
+```
+$> https://qwhale.ml/deactivate/{YOUR-TOKEN}
+```
 
-    The library works with [_pymongo_](https://github.com/mongodb/mongo-python-driver) so you can use it like you use to.\
+2) **Using the official library**
 
-    **code example**\
-    ```python
-    from qwhale_client import APIClient
+The library is simple, all you need is a TOKEN that you can get from our website [here](http://qwhale.ml)
+and that it! you are ready to work with our service.
 
-    TOKEN = "<YOUR API TOKEN>"
+The library works with [_pymongo_](https://github.com/mongodb/mongo-python-driver) so you can use it like you use to.
 
-    client = APIClient(TOKEN)
+**code example**
+```python
+from qwhale_client import APIClient
 
-    with client as database:
-        print(client.activated)  # -> True
-        database["test"].insert_one({"key": "value", "extra": "123456"})
-        document = database["test"].find_one({"key": "value"})
-        print(document)  # -> {"_id": ObjectId(...), "key": "value", "extra": "123456"}
+TOKEN = "<YOUR API TOKEN>"
 
-    print(client.activated)  # -> False
-    ```
+client = APIClient(TOKEN)
 
-    **Another code example**
-    ```python
-    from qwhale_client import APIClient
-
-    TOKEN = "<YOUR API TOKEN>"
-
-    client = APIClient(TOKEN)
-
-    database = client.get_database()
+with client as database:
     print(client.activated)  # -> True
-
     database["test"].insert_one({"key": "value", "extra": "123456"})
     document = database["test"].find_one({"key": "value"})
     print(document)  # -> {"_id": ObjectId(...), "key": "value", "extra": "123456"}
 
-    print(client.close())  # -> {'data_saved': True}
-    print(client.activated)  # -> False
-    ```
+print(client.activated)  # -> False
+```
+
+**Another code example**
+```python
+from qwhale_client import APIClient
+
+TOKEN = "<YOUR API TOKEN>"
+
+client = APIClient(TOKEN)
+
+database = client.get_database()
+print(client.activated)  # -> True
+
+database["test"].insert_one({"key": "value", "extra": "123456"})
+document = database["test"].find_one({"key": "value"})
+print(document)  # -> {"_id": ObjectId(...), "key": "value", "extra": "123456"}
+
+print(client.close())  # -> {'data_saved': True}
+print(client.activated)  # -> False
+```
