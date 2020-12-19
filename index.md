@@ -3,7 +3,7 @@
 Our service provides an easy way to store your data free on the MongoDB database.
 
 There is tow main options to use our service
-1) Using the REST API
+1) Using the REST API   
 To activate...
 ```
 $> https://qwhale.ml/activate/{YOUR-TOKEN}
