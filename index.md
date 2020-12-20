@@ -8,11 +8,11 @@ There is tow main options to use our service
 
 __To activate...__
 ```
-$> https://qwhale.ml/activate/{YOUR-TOKEN}
+$> curl https://qwhale.ml/activate/{YOUR-TOKEN}
 ```
 __To deactivate...__
 ```
-$> https://qwhale.ml/deactivate/{YOUR-TOKEN}
+$> curl https://qwhale.ml/deactivate/{YOUR-TOKEN}
 ```
 
 2) **Using the official library**
