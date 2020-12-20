@@ -23,7 +23,7 @@ and that it! you are ready to work with our service.
 The library works with [_pymongo_](https://github.com/mongodb/mongo-python-driver) so you can use it like you use to.
 
 **code example**
-```
+```python
 from qwhale_client import APIClient
 
 TOKEN = "<YOUR API TOKEN>"
@@ -40,7 +40,7 @@ print(client.activated)  # -> False
 ```
 
 **Another code example**
-```
+```python
 from qwhale_client import APIClient
 
 TOKEN = "<YOUR API TOKEN>"
