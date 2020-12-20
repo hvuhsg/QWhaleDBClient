@@ -7,7 +7,7 @@ setup(
     name="qwhale_client",  # How you named your package folder
     packages=["qwhale_client"],  # Chose the same as "name"
     include_package_data=True,
-    version="v0.1.4",  # Start with a small number and increase it with every change you make
+    version="v0.1.5",  # Start with a small number and increase it with every change you make
     license="MIT",  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description="Python client for Qwhale API",  # Give a short description about your library
     long_description=long_description,
