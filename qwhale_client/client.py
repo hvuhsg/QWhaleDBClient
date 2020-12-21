@@ -32,9 +32,7 @@ class APIClient:
 
     def activate_database(self):
         result = self._session.get(API_URL+f"/activate/{self._token}")
-        if result.status_code == 409:
-            self.deactivate_database()
-            result = self._session.get(API_URL + f"/activate/{self._token}")
+
         assert result.status_code == 200, result.json()
 
         activation_info = result.json()
