@@ -23,7 +23,7 @@ setup(
         "QWhale",
         "client",
         "storage",
-        "MongoDB"
+        "MongoDB",
     ],  # Keywords that define your package best
     install_requires=["pymongo", "requests"],  # I get to this in a second
     classifiers=[
