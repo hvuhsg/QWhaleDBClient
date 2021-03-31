@@ -2,7 +2,6 @@ import requests
 from pymongo import MongoClient
 from pymongo.database import Database
 
-
 __all__ = ["APIClient"]
 
 API_URL = "http://qwhale.ml/api"
@@ -31,10 +30,8 @@ class APIClient:
         return self._database_info
 
     def activate_database(self):
-        result = self._session.get(API_URL+f"/activate/{self._token}")
-        if result.status_code == 409:
-            self.deactivate_database()
-            result = self._session.get(API_URL + f"/activate/{self._token}")
+        result = self._session.get(API_URL + f"/activate/{self._token}")
+
         assert result.status_code == 200, result.json()
 
         activation_info = result.json()
@@ -42,7 +39,7 @@ class APIClient:
         self.activated = True
 
     def deactivate_database(self):
-        result = self._session.get(API_URL+f"/deactivate/{self._token}")
+        result = self._session.get(API_URL + f"/deactivate/{self._token}")
         assert result.status_code == 200, result.json()
 
         deactivation_info = result.json()

@@ -7,7 +7,7 @@ setup(
     name="qwhale_client",  # How you named your package folder
     packages=["qwhale_client"],  # Chose the same as "name"
     include_package_data=True,
-    version="v0.1.7",  # Start with a small number and increase it with every change you make
+    version="v0.1.8",  # Start with a small number and increase it with every change you make
     license="MIT",  # Chose a license from here: https://help.github.com/articles/licensing-a-repository
     description="Python client for Qwhale API",  # Give a short description about your library
     long_description=long_description,
@@ -23,7 +23,7 @@ setup(
         "QWhale",
         "client",
         "storage",
-        "MongoDB"
+        "MongoDB",
     ],  # Keywords that define your package best
     install_requires=["pymongo", "requests"],  # I get to this in a second
     classifiers=[
