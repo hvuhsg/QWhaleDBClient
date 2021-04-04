@@ -48,7 +48,9 @@ class APIClient:
     def get_database(self) -> Database:
         if self._database_info is None:
             self.activate_database()
-        client = MongoClient(self.database_info["mongo_url"], maxIdleTimeMS=1000*60*60)
+        client = MongoClient(
+            self.database_info["mongo_url"], maxIdleTimeMS=1000 * 60 * 60
+        )
         self._mongo_client = client
         db = client.get_database(self._db_name)
         return db
