@@ -2,7 +2,7 @@
 
 ## This is the official python client library
 
-The library is simple, all you need is a TOKEN that you can get from our website [hare](http://qwhale.ml)
+The library is simple, all you need is a TOKEN that you can get from our website hare
 and that it! you are ready to work with our service.
 
 
